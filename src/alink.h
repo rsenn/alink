@@ -590,3 +590,5 @@ extern UINT namecount,namemin,
 
 extern int buildDll;
 extern PUCHAR stubName;
+
+#include "util.h"
