@@ -67,6 +67,11 @@ UINT libPathCount=0;
 PCHAR *libPath=NULL;
 char *entryPoint=NULL;
 
+void waitKeypress() {
+  /*printf("----Press Enter to continue---");
+  while(((c=getchar())!='\n') && (c!=EOF));*/
+}
+
 void processArgs(int argc,char **argv)
 {
     long i,j;
@@ -713,8 +718,7 @@ void processArgs(int argc,char **argv)
 	printf("    -m      Enable map file\n");
 	printf("    -m+     Enable map file\n");
 	printf("    -m-     Disable map file\n");
-	printf("----Press Enter to continue---");
-	while(((c=getchar())!='\n') && (c!=EOF));
+        waitKeypress();
 	printf("\n");
 	printf("    -h      Display this help list\n");
 	printf("    -H      \"\n");
@@ -727,8 +731,7 @@ void processArgs(int argc,char **argv)
 	printf("            EXE - MSDOS EXE file\n");
 	printf("            PE  - Win32 PE Executable\n");
 	printf("    -entry name   Use public symbol name as the entry point\n");
-	printf("----Press Enter to continue---");
-	while(((c=getchar())!='\n') && (c!=EOF));
+        waitKeypress();
 	printf("\nOptions for PE files:\n");
 	printf("    -base addr        Set base address of image\n");
 	printf("    -filealign addr   Set section alignment in file\n");
